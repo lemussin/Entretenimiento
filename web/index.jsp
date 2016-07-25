@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="Estilos/css/style.css">
         <link id="theme_css" rel="stylesheet" href="Estilos/css/light.css">
         <link id="skin_css" rel="stylesheet" href="Estilos/css/skins/default.css">
+        <script type="text/javascript" src="Jquery/jquery-1.12.1.min.js"></script>
+        <script src="eventos/evtLogin.js" type="text/javascript"></script>
         <title>Inicio - Lemus Estudios</title>
     </head>
     <body class="login-page login-1">
@@ -31,7 +33,7 @@
                     </div>
                     <div class="login-inner shape">
                         <h4 class="bold intro uppercase black-color">ACCEDE CON TUS CREDENCIALES</h4>
-                        <form class="login-form" id="login-form" method="post" action="#" autocomplete="off">
+                        <form class="login-form" id="login-form" action="#">
                             <div class="form-input">
                                 <label class="main-color">Nombre de usuario:</label>
                                 <span class="fa fa-user main-color"></span>

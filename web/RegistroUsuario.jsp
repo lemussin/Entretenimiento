@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="Estilos/css/style.css">
         <link id="theme_css" rel="stylesheet" href="Estilos/css/light.css">
         <link id="skin_css" rel="stylesheet" href="Estilos/css/skins/default.css">
+        <script type="text/javascript" src="Jquery/jquery-1.12.1.min.js"></script>
+        <script type="text/javascript" src="eventos/evtRegistro.js"></script>
     </head>
     <body>
         <div class="pageWrapper animsition">
@@ -40,30 +42,9 @@
                             <li><a href="#" class="fa fa-skype" data-tooltip="true" data-title="skype" data-position="bottom"></a></li>
                             <li><a href="#" class="fa fa-twitter" data-tooltip="true" data-title="twitter" data-position="bottom"></a></li>
                         </ul>
-
                         <ul>
-                            <li class="dropdown"><a href="#" class="shape" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="login-bx"><i class="fa fa-lock"></i>Login</a>
-                                <div class="dropdown-menu login-popup black-bg">
-                                    <p class="small">Hello our valued visitor, We present you the best web solutions, just login ...</p>
-                                    <div class="login-controls">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="User name Or Email" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Password" />
-                                        </div>
-                                        <div class="form-group floated-controls">
-                                            <span class="block checkbox-block"><input type="checkbox" class="checkbox" /> <span>Remember Me!</span></span>
-                                            <a href="#">Forgot your password ?</a>
-                                        </div>
-                                        <div>
-                                            <button type="button" class="btn main-bg">Submit</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            <li class="dropdown"><a href="index.jsp" class="shape" aria-haspopup="true" aria-expanded="false" id="login-bx"><i class="fa fa-lock"></i>Login</a></li>
                         </ul>
-
                     </div>
 
                 </div>
@@ -71,17 +52,14 @@
             <!-- top bar end -->
 
             <div id="contentWrapper">
-
                 <div class="pageContent">
-
                     <div class="page-title title-1">
                         <div class="container">
                             <div class="row">
                                 <h1>Bienvenido a Lemus Estudios</h1>
                                 <h3>Por favor llena el siguiente formulario para acceder a nuestro sitio web</h3>
-
                                 <div class="breadcrumbs">
-                                    <a href="#">Registro</a><i class="fa fa-long-arrow-right main-color"></i><span>Formulario de registro</span>
+                                    <a href="index.jsp">Inicio</a><i class="fa fa-long-arrow-right main-color"></i><span>Registro</span><i class="fa fa-long-arrow-right main-color"></i><span>Formulario de registro</span>
                                 </div>
 
                             </div>
@@ -91,35 +69,55 @@
                     <div class="section">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-7 contact-form">
-                                    <div class="heading">
+                                <div class="col-md-12 contact-form">
+                                    <div class="heading" style="text-align: center;">
                                         <h3 class="uppercase head-6"><span class="main-color">Formulario </span>de registro</h3>
                                     </div>
                                     <form action="#" id="reg_form">
-                                        <div class="form-input">
-                                            <label>Nombre(s)<span class="red">*</span></label><input type="text" class="form-control shape" required>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-input">
+                                                    <label>Nombre(s)<span class="red">*</span></label><input type="text" class="form-control shape" id="nombre" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-input">
+                                                    <label>Apellido Paterno<span class="red">*</span></label><input id="AP" type="text" class="form-control shape" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-input">
+                                                    <label>Apellido Materno<span class="red">*</span></label><input id="AM" type="text" class="form-control shape" required>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-input">
-                                            <label>Apellido Paterno<span class="red">*</span></label><input type="text" class="form-control shape" required>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-input">
+                                                    <label>Email<span class="red">*</span></label><input id="email" type="email" class="form-control shape" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-input">
+                                                    <label>Nombre de usuario<span class="red">*</span></label><input id="usuario" type="text" class="form-control shape" required>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-input">
-                                            <label>Apellido Materno<span class="red">*</span></label><input type="text" class="form-control shape" required>
-                                        </div>
-                                        <div class="form-input">
-                                            <label>Contraseña<span class="red">*</span></label><input type="password" class="form-control shape" required>
-                                        </div>
-                                        <div class="form-input">
-                                            <label>Confirmar Contraseña<span class="red">*</span></label><input type="password" class="form-control shape" required>
-                                        </div>
-                                        <div class="form-input">
-                                            <label>Email<span class="red">*</span></label><input type="email" class="form-control shape" required>
-                                        </div>
-                                        <div class="form-input">
-                                            <label>Confirmar Email<span class="red">*</span></label><input type="email" class="form-control shape" required>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-input">
+                                                    <label>Contraseña<span class="red">*</span></label><input id="PAS1" type="password" class="form-control shape" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-input">
+                                                    <label>Confirmar Contraseña<span class="red">*</span></label><input id="PAS2" type="password" class="form-control shape" required>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-input">
                                             <label>Fecha de nacimiento<span class="red">*</span></label>
-                                            <select name="birthday_day" required class="small-select shape">
+                                            <select name="birthday_day" required class="small-select shape" id="dia">
                                                 <option>Dia</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -170,7 +168,7 @@
                                                 <option value="12">Diciembre</option>
                                             </select>
 
-                                            <select name="birthday_year" required class="small-select shape">
+                                            <select name="birthday_year" required class="small-select shape" id="anio">
                                                 <option>Año</option>
                                                 <option value="2012">2013</option>
                                                 <option value="2012">2012</option>
@@ -221,8 +219,8 @@
                                         <div class="form-input">
                                             <label>Genero</label>
                                             <div class="form-box floated-controls">
-                                                <span class="floated-item custom-radio"><input type="radio" class="radio" name="Gender" value="M" /><label>Masculino</label></span>
-                                                <span class="floated-item custom-radio"><input type="radio" class="radio" name="Gender" value="F" /><label>Femenino</label></span>
+                                                <span class="floated-item custom-radio"><input type="radio" class="radio" name="Gender" value="M" required /><label>Masculino</label></span>
+                                                <span class="floated-item custom-radio"><input type="radio" class="radio" name="Gender" value="F" required /><label>Femenino</label></span>
                                             </div>
                                         </div>
                                         <div class="clearfix"></div>
@@ -244,7 +242,7 @@
                                             </div>
                                         </div>
                                         <div class="form-input">
-                                            <label>Algo sobre ti</label><textarea class="shape"></textarea>
+                                            <label>Algo sobre ti</label><textarea class="shape" id="sobreTi"></textarea>
                                         </div>
                                         <div class="clearfix"></div>
                                         <div class="button-group">
@@ -255,31 +253,28 @@
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>			    
 
                 <!-- Footer start -->
                 <footer id="footWrapper">
-                    <!-- footer bottom bar start -->
                     <div class="footer-bottom">
                         <div class="container">
                             <div class="row">
-                                <!-- footer copyrights left cell -->
                                 <div class="copyrights col-md-5 first">© Copyrights <b class="main-color">Lemus Estudios</b> 2016. Todos los derechos reservados</div>
                             </div>
                         </div>
                     </div>
-                    <!-- footer bottom bar end -->
                 </footer>
                 <!-- Footer end -->
             </div>
         </div>
 
         <a id="to-top"><span class="fa fa-chevron-up shape main-bg"></span></a>
+        
+        <%--
+            Se cargan scripts de funcionamiento de la pagina
+        --%>
         <script type="text/javascript" src="Estilos/js/assets.min.js"></script>
         <script type="text/javascript" src="Estilos/js/script.js"></script>
-        
     </body>
 </html>
