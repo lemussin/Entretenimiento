@@ -13,7 +13,7 @@ $("document").ready(function(){
             success:function(usuario){
                 if(usuario.idUsuario!==0)
                 {
-                    alert("Bienvenido "+usuario.nombreUsuario);
+                    location.href="vistas/inicio.jsp";
                 }
                 else
                     alert("Información correcta revisa tu información por favor");
