@@ -17,7 +17,7 @@ import com.mongodb.MongoClient;
  */
 public class RegistroDAO {
     
-    public int registroUsuario(String nombre, String apellidoP, String apellidoM, String pass, String email, String fechaNac, String sobreTi, String genero,String usuario, String fechaReg)
+    public int registroUsuario(String nombre, String apellidoP, String apellidoM, String pass, String email, String fechaNac, String sobreTi, String genero,String usuario, String fechaReg, String nivelEstudios, String carrera, String casaEstudios, String empresaActual, String puestoActual)
     {
         /*
         El campo estatus regresara si el proceso fue exitoso o hubo una incidencia en el proceso:
@@ -72,6 +72,11 @@ public class RegistroDAO {
                 query.put("Genero", genero);
                 query.put("NombreUsuario", usuario);
                 query.put("FechaRegistro", fechaReg);
+                query.put("NivelEstudios", nivelEstudios);
+                query.put("Carrera", carrera);
+                query.put("CasaEstudios", casaEstudios);
+                query.put("EmpresaActual", empresaActual);
+                query.put("PuestoActual", puestoActual);
                 tabla.insert(query);
                 mongo.close();
                 estatus = 1;

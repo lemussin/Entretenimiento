@@ -5,17 +5,4 @@
  */
 $("document").ready(function(){
     
-    $("#cerrarSesion").click(function(){
-        var parametro = {seleccion:"cerrarSesion"};
-        $.ajax({
-            url:"../cerrarSesionController", type:"post", async:true, data:parametro, dataType:"JSON",
-            success:function(res){
-                location.href="../index.jsp";
-            },
-            error:function(error){
-                alert("Error al cerrar la sesión "+error.toString());
-            }
-        });
-    });
-    
 });

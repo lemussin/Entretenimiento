@@ -19,11 +19,20 @@ $("document").ready(function ()
                 genero = elementos[i].value;
         }
         var fechaNacimiento = $("#dia").val().toString()+"/"+$("#birthday_month").val()+"/"+$("#anio").val().toString();
+        var nivelEstudios = $("#nivelEstudios").val().toString();
+        var carrera = $("#carrera").val().toString();
+        var casaEstudios = $("#casaEstudios").val().toString();
+        var empresaActual = $("#empresaActual").val().toString();
+        var puestoActual = $("#puestoActual").val().toString();
+        console.log(casaEstudios+" "+nivelEstudios);
         if($("#PAS1").val()===$("#PAS2").val())
         {
             var Parametros = {seleccion: "registroSesion", nombre: ""+nombre, ap:""+ap, am:""+am,
             password:""+$("#PAS1").val().toString(), email:""+$("#email").val().toString(), fechaNacimiento:""+fechaNacimiento,
-            sobreTi:""+$("#sobreTi").val().toString(), genero:""+genero, usuario:""+$("#usuario").val()};
+            sobreTi:""+$("#sobreTi").val().toString(), genero:""+genero, usuario:""+$("#usuario").val(),
+            nivelEstudios:""+$("#nivelEstudios").val().toString(), carrera:""+$("#carrera").val().toString(), 
+            casaEstudios:""+$("#casaEstudios").val().toString(), empresaActual:""+$("#empresaActual").val().toString(),
+            puestoActual:""+$("#puestoActual").val().toString()};
         
             $.ajax({
                 url:"registroUsuario", async:true, data:Parametros,  type:"post", dataType:"JSON",

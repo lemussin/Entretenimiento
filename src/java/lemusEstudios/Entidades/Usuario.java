@@ -20,6 +20,11 @@ public class Usuario {
     String nombreUsuario;
     String genero;
     String SobreTi;
+    String nivelEstudios;
+    String carrera;
+    String casaEstudios;
+    String empresaActual;
+    String puestoActual;
 
     public int getIdUsuario() {
         return idUsuario;
@@ -92,4 +97,46 @@ public class Usuario {
     public void setSobreTi(String SobreTi) {
         this.SobreTi = SobreTi;
     }
+
+    public String getNivelEstudios() {
+        return nivelEstudios;
+    }
+
+    public void setNivelEstudios(String nivelEstudios) {
+        this.nivelEstudios = nivelEstudios;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
+    }
+
+    public String getCasaEstudios() {
+        return casaEstudios;
+    }
+
+    public void setCasaEstudios(String casaEstudios) {
+        this.casaEstudios = casaEstudios;
+    }
+
+    public String getEmpresaActual() {
+        return empresaActual;
+    }
+
+    public void setEmpresaActual(String empresaActual) {
+        this.empresaActual = empresaActual;
+    }
+
+    public String getPuestoActual() {
+        return puestoActual;
+    }
+
+    public void setPuestoActual(String puestoActual) {
+        this.puestoActual = puestoActual;
+    }
+    
+    
 }

@@ -42,6 +42,11 @@ public class LoginDAO {
                 usuario.setSobreTi(cur.curr().get("SobreUsuario").toString());
                 usuario.setGenero(cur.curr().get("Genero").toString());
                 usuario.setNombreUsuario(cur.curr().get("NombreUsuario").toString());
+                usuario.setNivelEstudios(cur.curr().get("NivelEstudios").toString());
+                usuario.setCarrera(cur.curr().get("Carrera").toString());
+                usuario.setCasaEstudios(cur.curr().get("CasaEstudios").toString());
+                usuario.setEmpresaActual(cur.curr().get("EmpresaActual").toString());
+                usuario.setPuestoActual(cur.curr().get("PuestoActual").toString());
             }
             mongo.close();
         }

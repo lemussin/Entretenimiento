@@ -216,11 +216,50 @@
                                                 <option value="1970">1970</option>
                                             </select>
                                         </div>
-                                        <div class="form-input">
-                                            <label>Genero</label>
-                                            <div class="form-box floated-controls">
-                                                <span class="floated-item custom-radio"><input type="radio" class="radio" name="Gender" value="M" required /><label>Masculino</label></span>
-                                                <span class="floated-item custom-radio"><input type="radio" class="radio" name="Gender" value="F" required /><label>Femenino</label></span>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-input">
+                                                    <label>Genero</label>
+                                                    <div class="form-box floated-controls">
+                                                        <span class="floated-item custom-radio"><input type="radio" class="radio" name="Gender" value="M" required /><label>Masculino</label></span>
+                                                        <span class="floated-item custom-radio"><input type="radio" class="radio" name="Gender" value="F" required /><label>Femenino</label></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-input">
+                                                    <label>Nivel de estudios<span class="red">*</span></label>
+                                                    <select name="nivelEstudios" required class="select shape" id="nivelEstudios">
+                                                        <option value="Primaria">Primaria</option>
+                                                        <option value="Secundaria">Secuendaria</option>
+                                                        <option value="Preparatoria">Preparatoria</option>
+                                                        <option value="Universidad">Universidad</option>
+                                                        <option value="Maestria">Maestria</option>
+                                                        <option value="Doctorado">Doctorado</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-input">
+                                                    <label>Carrera Cursada<span class="red">*</span></label><input type="text" id="carrera" class="form-control shape" required />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-input">
+                                                    <label>Casa de estudios<span class="red">*</span></label><input type="text" id="casaEstudios" class="form-control shape" required />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-input">
+                                                    <label>Empresa Laboral Actual<span class="red">*</span></label><input type="text" id="empresaActual" class="form-control shape" required />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-input">
+                                                    <label>Puesto Actual<span class="red">*</span></label><input type="text" id="puestoActual" class="form-control shape" required />
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="clearfix"></div>

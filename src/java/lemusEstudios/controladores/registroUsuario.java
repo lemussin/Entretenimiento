@@ -60,7 +60,12 @@ public class registroUsuario extends HttpServlet {
                 String sobreTi = request.getParameter("sobreTi");
                 String genero = request.getParameter("genero");
                 String usuario = request.getParameter("usuario");
-                int exito = registro.registroUsuario(nombre, ap, am, password, email, fechaNac, sobreTi, genero, usuario, fechaReg);
+                String nivelEstudios = request.getParameter("nivelEstudios");
+                String carrera = request.getParameter("carrera");
+                String casaEstudios = request.getParameter("casaEstudios");
+                String empresaActual = request.getParameter("empresaActual");
+                String puestoActual = request.getParameter("puestoActual");
+                int exito = registro.registroUsuario(nombre, ap, am, password, email, fechaNac, sobreTi, genero, usuario, fechaReg, nivelEstudios, carrera, casaEstudios, empresaActual, puestoActual);
                 out.print(json.toJson(exito));
                 break;
         }
